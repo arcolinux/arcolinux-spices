@@ -1,12 +1,12 @@
 # ArcoLinux Spices
 
-# To do
+# Purpose
 
 - add ArcoLinux packages to Arch Linux
 
 - add key to Arch Linux
 
-- add packages used in bashrc
+- add packages used in bashrc to Arch Linux
 
 
 
