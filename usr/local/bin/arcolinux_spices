@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python3 /usr/share/arcolinux_spices/arcolinux_spices.py

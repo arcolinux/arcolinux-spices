@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Arcolinux Spices
+GenericName=Arcolinux Spices Application
+X-GNOME-FullName=Arcolinux Spices Application
+Comment=bring in all the spices from ArcoLinux
+Exec=/usr/local/bin/arcolinux_spices
+Icon=arcolinux-tweak-tool
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;Utility;Settings;Security;X-GNOME-Settings-Panel;X-GNOME-SystemSettings;X-Unity-Settings-Panel;X-XFCE-SettingsDialog;X-XFCE-SystemSettings;
+Keywords=spices;arco;
+StartupNotify=true
