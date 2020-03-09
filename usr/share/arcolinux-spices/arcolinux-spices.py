@@ -25,7 +25,7 @@ class Spices(Gtk.Window):
         t.start()
 
     def on_btn2_clicked(self, widget):
-        line = ["sh", base_dir + "/scripts/add-keyservers-for-key-importing.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/add-keyservers-for-key-importing.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
