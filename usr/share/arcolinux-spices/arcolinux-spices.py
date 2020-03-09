@@ -19,7 +19,7 @@ class Spices(Gtk.Window):
         GUI.GUI(self, Gtk)
 
     def on_btn1_clicked(self, widget):
-        line = ["sh", base_dir + "/scripts/trust-key.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/trust-key.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()

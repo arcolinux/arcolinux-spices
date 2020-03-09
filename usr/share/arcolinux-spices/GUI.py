@@ -32,7 +32,7 @@ def GUI(self, Gtk):
     #               BUTTONS
     # ========================================
 
-    btn1 = Gtk.Button(label="1. Add and trust ArcoLinux key")
+    btn1 = Gtk.Button(label="1. Add and trust ArcoLinux key (takes a while)")
     btn2 = Gtk.Button(label="2. Fix keyserver connection for step 1")
     btn3 = Gtk.Button(label="3. Add ArcoLinux repos")
     btn4 = Gtk.Button(label="4. Add software used in .bashrc")
