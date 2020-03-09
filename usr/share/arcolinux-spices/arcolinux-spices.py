@@ -37,13 +37,13 @@ class Spices(Gtk.Window):
         t.start()
 
     def on_btn4_clicked(self, widget):
-        line = ["sh", base_dir + "/scripts/get-the-latest-arcolinux-bashrc.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/get-the-latest-arcolinux-bashrc.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
 
     def on_btn5_clicked(self, widget):
-        line = ["sh", base_dir + "/scripts/install-software-arcolinux-uses-in-bashrc.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/install-software-arcolinux-uses-in-bashrc.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
