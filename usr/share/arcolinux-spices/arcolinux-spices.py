@@ -19,25 +19,25 @@ class Spices(Gtk.Window):
         GUI.GUI(self, Gtk)
 
     def on_btn1_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/trust-key.sh"]
+        line = ["sh", base_dir + "/scripts/trust-key.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
 
     def on_btn2_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/add-keyservers-for-key-importing.sh"]
+        line = ["sh", base_dir + "/scripts/add-keyservers-for-key-importing.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
 
     def on_btn3_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/add-arcolinux-repo-to-pacman-conf.sh"]
+        line = ["sh", base_dir + "/scripts/add-arcolinux-repo-to-pacman-conf.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
 
     def on_btn4_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/install-software-arcolinux-uses-in-bashrc.sh"]
+        line = ["sh", base_dir + "/scripts/install-software-arcolinux-uses-in-bashrc.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
