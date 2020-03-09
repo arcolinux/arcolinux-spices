@@ -35,8 +35,8 @@ def GUI(self, Gtk):
     btn1 = Gtk.Button(label="1. Add and trust ArcoLinux key (takes a while)")
     btn2 = Gtk.Button(label="2. Fix keyserver connection for step 1")
     btn3 = Gtk.Button(label="3. Add ArcoLinux repos")
-    btn4 = Gtk.Button(label="4. Add software used in .bashrc")
-    btn5 = Gtk.Button(label="5. Get the latest .bashrc and replace current one")
+    btn4 = Gtk.Button(label="4. Get the latest ArcoLinux .bashrc and replace current one")
+    btn5 = Gtk.Button(label="5. Add software used in .bashrc")
 
     btn1.connect("clicked", self.on_btn1_clicked)
     btn2.connect("clicked", self.on_btn2_clicked)
@@ -50,7 +50,7 @@ def GUI(self, Gtk):
     hbox4.pack_start(btn4, True, True, 0)
     hbox5.pack_start(btn5, True, True, 0)
 
-    self.lbl_status = Gtk.Label(label="Importing all ArcoLinux packages on Arch Linux")
+    self.lbl_status = Gtk.Label(label="Application to import ArcoLinux packages on Arch Linux")
 
     vbox.pack_start(hbox1, False, False, 0)
     vbox.pack_start(hbox2, False, False, 0)
