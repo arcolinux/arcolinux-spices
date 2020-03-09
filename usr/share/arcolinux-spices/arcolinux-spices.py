@@ -31,7 +31,7 @@ class Spices(Gtk.Window):
         t.start()
 
     def on_btn3_clicked(self, widget):
-        line = ["sh", base_dir + "/scripts/add-arcolinux-repo-to-pacman-conf.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/add-arcolinux-repo-to-pacman-conf.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
