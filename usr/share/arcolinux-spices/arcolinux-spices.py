@@ -28,13 +28,13 @@ class Spices(Gtk.Window):
         t.start()
 
     def on_btn2_clicked(self, widget):
-        line = ["sh", base_dir + "/scripts/add-keyservers-for-key-importing.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/add-keyservers-for-key-importing.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
 
     def on_btn3_clicked(self, widget):
-        line = ["sh", base_dir + "/scripts/add-arcolinux-repo-to-pacman-conf.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/add-arcolinux-repo-to-pacman-conf.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
@@ -46,7 +46,7 @@ class Spices(Gtk.Window):
         t.start()
 
     def on_btn5_clicked(self, widget):
-        line = ["sh", base_dir + "/scripts/install-software-arcolinux-uses-in-bashrc.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/install-software-arcolinux-uses-in-bashrc.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
