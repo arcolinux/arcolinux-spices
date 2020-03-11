@@ -4,7 +4,10 @@ import os
 import subprocess
 import threading
 import GUI
-gi.require_version('Gtk', '3.0')
+try:
+    gi.require_version('Gtk', '3.0')
+except:  # noqa
+    pass
 from gi.repository import Gtk, GLib  # noqa
 
 base_dir = os.path.dirname(os.path.realpath(__file__))
