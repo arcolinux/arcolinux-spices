@@ -50,6 +50,12 @@ class Spices(Gtk.Window):
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
+      
+    def on_btn6_clicked(self, widget):
+        line = ["pkexec", "sh", base_dir + "/scripts/change-makepkg-conf.sh"]
+        t = threading.Thread(target=self.run_script, args=(line,))
+        t.daemon = True
+        t.start()    
 
 
 

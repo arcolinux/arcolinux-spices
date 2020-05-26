@@ -27,6 +27,7 @@ def GUI(self, Gtk):
     hbox3 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
     hbox4 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
     hbox5 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+    hbox6 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
 
     # ========================================
     #               BUTTONS
@@ -37,18 +38,21 @@ def GUI(self, Gtk):
     btn3 = Gtk.Button(label="3. Add ArcoLinux repos")
     btn4 = Gtk.Button(label="4. Get the latest ArcoLinux .bashrc and replace current one")
     btn5 = Gtk.Button(label="5. Add software used in .bashrc")
+    btn6 = Gtk.Button(label="6. Improve /etc/makepkg.conf")
 
     btn1.connect("clicked", self.on_btn1_clicked)
     btn2.connect("clicked", self.on_btn2_clicked)
     btn3.connect("clicked", self.on_btn3_clicked)
     btn4.connect("clicked", self.on_btn4_clicked)
     btn5.connect("clicked", self.on_btn5_clicked)
+    btn6.connect("clicked", self.on_btn6_clicked)
 
     hbox1.pack_start(btn1, True, True, 0)
     hbox2.pack_start(btn2, True, True, 0)
     hbox3.pack_start(btn3, True, True, 0)
     hbox4.pack_start(btn4, True, True, 0)
     hbox5.pack_start(btn5, True, True, 0)
+    hbox6.pack_start(btn6, True, True, 0)
 
     self.lbl_status = Gtk.Label(label="Application to import ArcoLinux packages on Arch Linux")
 
@@ -57,4 +61,5 @@ def GUI(self, Gtk):
     vbox.pack_start(hbox3, False, False, 0)
     vbox.pack_start(hbox4, False, False, 0)
     vbox.pack_start(hbox5, False, False, 0)
+    vbox.pack_start(hbox6, False, False, 0)
     vbox.pack_end(self.lbl_status, False, False, 0)
