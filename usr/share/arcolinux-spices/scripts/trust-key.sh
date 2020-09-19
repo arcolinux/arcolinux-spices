@@ -12,6 +12,12 @@ pacman-key --lsign-key 4B1B49F7186D8731
 #stephen
 pacman-key -r 02D507C6EFB8CEAA
 pacman-key --lsign-key 02D507C6EFB8CEAA
+#Brad
+pacman-key -r 18064BF445855549
+pacman-key --lsign-key 18064BF445855549
+#Raniel
+pacman-key -r 7EC1A5550718AB89
+pacman-key --lsign-key 7EC1A5550718AB89
 
-sudo pacman-key --refresh-keys
+pacman-key --refresh-keys
 echo "###                 ArcoLinux key trusted                      ####"
