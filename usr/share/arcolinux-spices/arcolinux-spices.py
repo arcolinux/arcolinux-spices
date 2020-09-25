@@ -57,6 +57,11 @@ class Spices(Gtk.Window):
         t.daemon = True
         t.start()    
 
+    def on_btn7_clicked(self, widget):
+        line = ["pkexec", "sh", base_dir + "/scripts/install-polkit.sh"]
+        t = threading.Thread(target=self.run_script, args=(line,))
+        t.daemon = True
+        t.start() 
 
 
     def run_script(self, command):
