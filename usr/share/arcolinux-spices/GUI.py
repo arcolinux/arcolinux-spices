@@ -34,8 +34,8 @@ def GUI(self, Gtk):
     #               BUTTONS
     # ========================================
 
-    btn1 = Gtk.Button(label="1. Add and trust ArcoLinux key (takes a while)")
-    btn2 = Gtk.Button(label="2. Fix keyserver connection for step 1")
+    btn2 = Gtk.Button(label="1. Fix keyserver connection")
+    btn1 = Gtk.Button(label="2. Add and trust ArcoLinux key (takes a while)")
     btn3 = Gtk.Button(label="3. Add ArcoLinux repos")
     btn5 = Gtk.Button(label="4. Add software used in .bashrc")
     btn6 = Gtk.Button(label="5. Improve /etc/makepkg.conf")
@@ -62,8 +62,8 @@ def GUI(self, Gtk):
     self.lbl_nonroot = Gtk.Label(label="Run as user")
 
     vbox.pack_start(self.lbl_status, False, False, 0)
-    vbox.pack_start(hbox1, False, False, 0)
     vbox.pack_start(hbox2, False, False, 0)
+    vbox.pack_start(hbox1, False, False, 0)
     vbox.pack_start(hbox3, False, False, 0)
     vbox.pack_start(hbox5, False, False, 0)
     vbox.pack_start(hbox6, False, False, 0)
