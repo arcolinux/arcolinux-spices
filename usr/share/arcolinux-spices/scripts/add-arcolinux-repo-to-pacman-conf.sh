@@ -22,4 +22,4 @@ sudo pacman -Syy
 echo "Installing the official mirrorlist file now."
 echo "It will overwrite the one we downloaded earlier on."
 sudo pacman -S arcolinux-mirrorlist-git --noconfirm
-echo "###              ArcoLinux repo's have been added             ####"
+echo "####              ArcoLinux repo's have been added             ####"

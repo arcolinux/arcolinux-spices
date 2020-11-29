@@ -19,5 +19,5 @@ pacman-key --lsign-key 18064BF445855549
 pacman-key -r 7EC1A5550718AB89
 pacman-key --lsign-key 7EC1A5550718AB89
 
-pacman-key --refresh-keys
-echo "###                 ArcoLinux key trusted                      ####"
+#pacman-key --refresh-keys
+echo "####                 ArcoLinux key trusted                      ####"

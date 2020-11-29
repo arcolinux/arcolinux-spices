@@ -13,4 +13,4 @@ echo '
 keyserver hkp://pool.sks-keyservers.net:80
 keyserver hkps://hkps.pool.sks-keyservers.net:443
 keyserver hkp://ipv4.pool.sks-keyservers.net:11371' | sudo tee --append /etc/pacman.d/gnupg/gpg.conf
-echo "###          Keyservers with ports have been added to /etc/pacman.d/gnupg/gpg.conf            ####"
+echo "####          Keyservers with ports have been added to /etc/pacman.d/gnupg/gpg.conf            ####"
