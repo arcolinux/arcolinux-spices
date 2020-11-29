@@ -58,10 +58,11 @@ def GUI(self, Gtk):
     hbox6.pack_start(btn6, True, True, 0)
     hbox7.pack_start(btn7, True, True, 0)
 
-    self.lbl_status = Gtk.Label(label="Application to import ArcoLinux packages on Arch Linux (run as root)")
-    self.lbl_nonroot = Gtk.Label(label="Run as user")
+    self.lbl_status = Gtk.Label(label="Application to import ArcoLinux packages on Arch Linux")
+    self.lbl_nonroot = Gtk.Label(label="Run this as user")
+    self.lbl_root = Gtk.Label(label="Run these as root")
 
-    vbox.pack_start(self.lbl_status, False, False, 0)
+    vbox.pack_start(self.lbl_root, False, False, 0)
     vbox.pack_start(hbox2, False, False, 0)
     vbox.pack_start(hbox1, False, False, 0)
     vbox.pack_start(hbox3, False, False, 0)
@@ -70,3 +71,4 @@ def GUI(self, Gtk):
     vbox.pack_start(hbox7, False, False, 0)
     vbox.pack_start(self.lbl_nonroot, False, False, 0)
     vbox.pack_start(hbox4, False, False, 0)
+    vbox.pack_end(self.lbl_status, False, False, 0)
