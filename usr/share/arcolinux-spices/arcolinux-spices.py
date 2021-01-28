@@ -22,47 +22,46 @@ class Spices(Gtk.Window):
         GUI.GUI(self, Gtk)
 
     def on_btn1_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/trust-key.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/1-fix-keyserver-connection.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
 
     def on_btn2_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/add-keyservers-for-key-importing.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/2-add-and-trust-arcolinux-keys.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
 
     def on_btn3_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/add-arcolinux-repo-to-pacman-conf.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/3-add-arcolinux-repos.sh.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
 
     def on_btn4_clicked(self, widget):
-        line = ["sh", base_dir + "/scripts/get-the-latest-arcolinux-bashrc.sh"]
+        line = ["sh", base_dir + "/scripts/4-add-software-used-in-bashrc.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
 
     def on_btn5_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/install-software-arcolinux-uses-in-bashrc.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/5-improve-makepkg.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
       
     def on_btn6_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/change-makepkg-conf.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/6-install-polkit.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()    
 
     def on_btn7_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/install-polkit.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/7-get-the-latest-arcolinux-bashrc.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start() 
-
 
     def run_script(self, command):
         with subprocess.Popen(command, bufsize=1, stdout=subprocess.PIPE, universal_newlines=True) as p:

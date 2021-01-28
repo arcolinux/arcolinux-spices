@@ -34,13 +34,14 @@ def GUI(self, Gtk):
     #               BUTTONS
     # ========================================
 
-    btn2 = Gtk.Button(label="1. Fix keyserver connection")
-    btn1 = Gtk.Button(label="2. Add and trust ArcoLinux key (takes a while)")
+    btn1 = Gtk.Button(label="1. Fix keyserver connection")
+    btn2 = Gtk.Button(label="2. Add and trust ArcoLinux key (takes a while)")
     btn3 = Gtk.Button(label="3. Add ArcoLinux repos")
-    btn5 = Gtk.Button(label="4. Add software used in .bashrc")
-    btn6 = Gtk.Button(label="5. Improve /etc/makepkg.conf")
-    btn7 = Gtk.Button(label="6. Install polkit agent")
-    btn4 = Gtk.Button(label="1. Get the latest ArcoLinux .bashrc and replace current one")
+    btn4 = Gtk.Button(label="4. Add software used in .bashrc")
+    btn5 = Gtk.Button(label="5. Improve /etc/makepkg.conf")
+    btn6 = Gtk.Button(label="6. Install polkit agent")
+    btn7 = Gtk.Button(label="7. Get the latest ArcoLinux .bashrc and replace current one")
+
 
     btn1.connect("clicked", self.on_btn1_clicked)
     btn2.connect("clicked", self.on_btn2_clicked)
@@ -63,12 +64,12 @@ def GUI(self, Gtk):
     self.lbl_root = Gtk.Label(label="Run these as root")
 
     vbox.pack_start(self.lbl_root, False, False, 0)
-    vbox.pack_start(hbox2, False, False, 0)
     vbox.pack_start(hbox1, False, False, 0)
+    vbox.pack_start(hbox2, False, False, 0)
     vbox.pack_start(hbox3, False, False, 0)
+    vbox.pack_start(hbox4, False, False, 0)
     vbox.pack_start(hbox5, False, False, 0)
     vbox.pack_start(hbox6, False, False, 0)
-    vbox.pack_start(hbox7, False, False, 0)
     vbox.pack_start(self.lbl_nonroot, False, False, 0)
-    vbox.pack_start(hbox4, False, False, 0)
+    vbox.pack_start(hbox7, False, False, 0)
     vbox.pack_end(self.lbl_status, False, False, 0)
