@@ -30,22 +30,3 @@ Include = /etc/pacman.d/arcolinux-mirrorlist
 [arcolinux_repo_xlarge]
 SigLevel = Required DatabaseOptional
 Include = /etc/pacman.d/arcolinux-mirrorlist' | sudo tee --append /etc/pacman.conf
-
-######################################################################################################################
-
-# sudo pacman -S --noconfirm --needed expac
-# sudo pacman -S --noconfirm --needed hwinfo
-# sudo pacman -S --noconfirm --needed reflector
-# sudo pacman -S --noconfirm --needed youtube-dl
-# sudo pacman -S --noconfirm --needed yay-bin
-# sudo pacman -S --noconfirm --needed neofetch
-
-######################################################################################################################
-
-echo "Getting .bashrc from arcolinux-root"
-for i in `ls /home/`
-do
-	person=$i
-done
-wget https://raw.githubusercontent.com/arcolinux/arcolinux-root/master/etc/skel/.bashrc-latest -O /home/$person/bashrc-of-arcolinux
-echo "####    The ArcoLinux bashrc has been downloaded and is in your home directory     ####"
