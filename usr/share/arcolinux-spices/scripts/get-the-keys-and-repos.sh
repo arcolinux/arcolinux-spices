@@ -4,14 +4,14 @@
 
 echo "Getting the ArcoLinux keys from the ArcoLinux repo"
 
-sudo wget https://github.com/arcolinux/arcolinux_repo/raw/master/x86_64/arcolinux-keyring-20230919-6-any.pkg.tar.zst -O /tmp/arcolinux-keyring-20230919-6-any.pkg.tar.zst
+sudo curl "https://github.com/arcolinux/arcolinux_repo/raw/master/x86_64/arcolinux-keyring-20230919-6-any.pkg.tar.zst" -o /tmp/arcolinux-keyring-20230919-6-any.pkg.tar.zst
 sudo pacman -U --noconfirm --needed /tmp/arcolinux-keyring-20230919-6-any.pkg.tar.zst
 
 ######################################################################################################################
 
 echo "Getting the latest arcolinux mirrors file"
 sudo pacman -S wget --noconfirm --needed
-sudo wget https://raw.githubusercontent.com/arcolinux/arcolinux-mirrorlist/master/etc/pacman.d/arcolinux-mirrorlist -O /etc/pacman.d/arcolinux-mirrorlist
+sudo curl "https://raw.githubusercontent.com/arcolinux/arcolinux-mirrorlist/master/etc/pacman.d/arcolinux-mirrorlist" -o /etc/pacman.d/arcolinux-mirrorlist
 echo '
 #[arcolinux_repo_testing]
 #SigLevel = Required DatabaseOptional
@@ -45,5 +45,5 @@ for i in `ls /home/`
 do
 	person=$i
 done
-wget https://raw.githubusercontent.com/arcolinux/arcolinux-root/master/etc/skel/.bashrc-latest -O /home/$person/bashrc-of-arcolinux
+curl https://raw.githubusercontent.com/arcolinux/arcolinux-root/master/etc/skel/.bashrc-latest -o /home/$person/bashrc-of-arcolinux
 echo "####    The ArcoLinux bashrc has been downloaded and is in your home directory     ####"
