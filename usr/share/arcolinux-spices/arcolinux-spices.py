@@ -1,3 +1,6 @@
+#                #=======================================================
+#                #=     Author: Brad Heffernan - Erik Dubois            =
+#                #=======================================================
 
 import gi
 import os
@@ -6,9 +9,10 @@ import threading
 import GUI
 try:
     gi.require_version('Gtk', '3.0')
+    gi.require_version('Gdk', '3.0')
 except:  # noqa
     pass
-from gi.repository import Gtk, GLib  # noqa
+from gi.repository import Gtk, Gdk, GLib  # noqa
 
 base_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -22,46 +26,10 @@ class Spices(Gtk.Window):
         GUI.GUI(self, Gtk)
 
     def on_btn1_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/1-fix-keyserver-connection.sh"]
+        line = ["pkexec", "sh", base_dir + "/scripts/get-the-keys-and-repos.sh"]
         t = threading.Thread(target=self.run_script, args=(line,))
         t.daemon = True
         t.start()
-
-    def on_btn2_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/2-add-and-trust-arcolinux-keys.sh"]
-        t = threading.Thread(target=self.run_script, args=(line,))
-        t.daemon = True
-        t.start()
-
-    def on_btn3_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/3-add-arcolinux-repos.sh"]
-        t = threading.Thread(target=self.run_script, args=(line,))
-        t.daemon = True
-        t.start()
-
-    def on_btn4_clicked(self, widget):
-        line = ["sh", base_dir + "/scripts/4-add-software-used-in-bashrc.sh"]
-        t = threading.Thread(target=self.run_script, args=(line,))
-        t.daemon = True
-        t.start()
-
-    def on_btn5_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/5-improve-makepkg.sh"]
-        t = threading.Thread(target=self.run_script, args=(line,))
-        t.daemon = True
-        t.start()
-      
-    def on_btn6_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/6-install-polkit.sh"]
-        t = threading.Thread(target=self.run_script, args=(line,))
-        t.daemon = True
-        t.start()    
-
-    def on_btn7_clicked(self, widget):
-        line = ["pkexec", "sh", base_dir + "/scripts/7-get-the-latest-arcolinux-bashrc.sh"]
-        t = threading.Thread(target=self.run_script, args=(line,))
-        t.daemon = True
-        t.start() 
 
     def run_script(self, command):
         with subprocess.Popen(command, bufsize=1, stdout=subprocess.PIPE, universal_newlines=True) as p:
@@ -70,6 +38,14 @@ class Spices(Gtk.Window):
 
 
 if __name__ == "__main__":
+    style_provider = Gtk.CssProvider()
+    style_provider.load_from_path(base_dir + "/att.css")
+
+    Gtk.StyleContext.add_provider_for_screen(
+        Gdk.Screen.get_default(),
+        style_provider,
+        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+    )
     w = Spices()
     w.connect("delete-event", Gtk.main_quit)
     w.show_all()
