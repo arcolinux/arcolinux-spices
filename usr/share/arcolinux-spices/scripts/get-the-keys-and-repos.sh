@@ -20,22 +20,22 @@ if grep -q arcolinux_repo /etc/pacman.conf; then
 
 else
 
-	echo '
-	#[arcolinux_repo_testing]
-	#SigLevel = Required DatabaseOptional
-	#Include = /etc/pacman.d/arcolinux-mirrorlist
+echo '
+#[arcolinux_repo_testing]
+#SigLevel = Required DatabaseOptional
+#Include = /etc/pacman.d/arcolinux-mirrorlist
 
-	[arcolinux_repo]
-	SigLevel = Required DatabaseOptional
-	Include = /etc/pacman.d/arcolinux-mirrorlist
+[arcolinux_repo]
+SigLevel = Required DatabaseOptional
+Include = /etc/pacman.d/arcolinux-mirrorlist
 
-	[arcolinux_repo_3party]
-	SigLevel = Required DatabaseOptional
-	Include = /etc/pacman.d/arcolinux-mirrorlist
+[arcolinux_repo_3party]
+SigLevel = Required DatabaseOptional
+Include = /etc/pacman.d/arcolinux-mirrorlist
 
-	[arcolinux_repo_xlarge]
-	SigLevel = Required DatabaseOptional
-	Include = /etc/pacman.d/arcolinux-mirrorlist' | sudo tee --append /etc/pacman.conf
+[arcolinux_repo_xlarge]
+SigLevel = Required DatabaseOptional
+Include = /etc/pacman.d/arcolinux-mirrorlist' | sudo tee --append /etc/pacman.conf
 
 fi
 
