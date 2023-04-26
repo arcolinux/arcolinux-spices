@@ -4,6 +4,7 @@
 
 import gi
 import os
+from distro import id
 import subprocess
 import threading
 import GUI
@@ -15,6 +16,32 @@ except:  # noqa
 from gi.repository import Gtk, Gdk, GLib  # noqa
 
 base_dir = os.path.dirname(os.path.realpath(__file__))
+print(
+    "---------------------------------------------------------------------------"
+)
+print("If you have errors, report it on the discord channel of ArcoLinux")
+print("You can receive support on https://discord.gg/stBhS4taje")
+print(
+    "---------------------------------------------------------------------------"
+)
+print(
+    "We will install the ArcoLinux keys and mirrors."
+)
+print(
+    "The ArcoLinux repositories will be added to your /etc/pacman.conf "
+)
+print(
+    "---------------------------------------------------------------------------"
+)
+print("[INFO] : pkgver = pkgversion")
+print("[INFO] : pkgrel = pkgrelease")
+print(
+    "---------------------------------------------------------------------------"
+)
+print("[INFO] : Distro = " + id() )
+print(
+    "---------------------------------------------------------------------------"
+)
 
 
 class Spices(Gtk.Window):
