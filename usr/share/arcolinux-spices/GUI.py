@@ -28,7 +28,7 @@ def GUI(self, Gtk):
     #               BUTTONS
     # ========================================
 
-    btn1 = Gtk.Button(label="Get the ArcoLinux Keys and Packages")
+    btn1 = Gtk.Button(label="Install the ArcoLinux Keys and Packages")
     btn1.set_size_request(550, 100)
     btn1.set_name("label")
 
