@@ -28,7 +28,7 @@ def GUI(self, Gtk):
     #               BUTTONS
     # ========================================
 
-    btn1 = Gtk.Button(label="Install the ArcoLinux Keys and Packages")
+    btn1 = Gtk.Button(label="Install the ArcoLinux repos, keys and mirrors")
     btn1.set_size_request(550, 100)
     btn1.set_name("label")
 
@@ -36,7 +36,7 @@ def GUI(self, Gtk):
 
     hbox1.pack_start(btn1, True, True, 0)
 
-    self.lbl_status = Gtk.Label(label="Importing ArcoLinux keyrings and adding ArcoLinux repos")
+    self.lbl_status = Gtk.Label(label="Importing ArcoLinux keyrings/mirrors and adding ArcoLinux repos")
 
     vbox.pack_start(hbox1, False, False, 0)
     vbox.pack_end(self.lbl_status, False, False, 0)
